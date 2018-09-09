@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Adj325的博客">
+    <meta name="keyword"  content="腾讯">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        Linuxmint 体验之旅 - Adj325的博客 | Adj325&#39;s Blog
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> Just water water... </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar">
+            <img src="/img/avatar.jpg" />
+        </div>
+        <div class="name">
+            <i>Adj325</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archive">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Linuxmint-体验之旅"><span class="toc-text">Linuxmint 体验之旅</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-安装"><span class="toc-text">1. 安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-更新源"><span class="toc-text">2. 更新源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-主机通过虚拟机转发上网"><span class="toc-text">3. 主机通过虚拟机转发上网</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-操作"><span class="toc-text">4. 操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-新建文件模板"><span class="toc-text">4.1 新建文件模板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-切换root用户"><span class="toc-text">4.2 切换root用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-常用软件的英文名称"><span class="toc-text">4.3 常用软件的英文名称</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-虚拟机"><span class="toc-text">4.4 虚拟机</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-4-1-无法拖拽文件"><span class="toc-text">4.4.1 无法拖拽文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-4-2-返回主机"><span class="toc-text">4.4.2 返回主机</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-4-3-更换微信提示声音"><span class="toc-text">4.4.3 更换微信提示声音</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-截图工具"><span class="toc-text">4.5 截图工具</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-5-1-deepin-scrot"><span class="toc-text">4.5.1 deepin-scrot</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-5-2-spectacle"><span class="toc-text">4.5.2 spectacle</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-5-3-shutter"><span class="toc-text">4.5.3 shutter</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-6-KDE"><span class="toc-text">4.6 KDE</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-6-1-窗口平铺"><span class="toc-text">4.6.1 窗口平铺</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-6-2-窗口最小化"><span class="toc-text">4.6.2 窗口最小化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-6-3-切换输入法皮肤"><span class="toc-text">4.6.3 切换输入法皮肤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-6-4-拖拽图标"><span class="toc-text">4.6.4 拖拽图标</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-6-5-更改图标大小"><span class="toc-text">4.6.5 更改图标大小</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-6-6-禁用其它五笔等输入法"><span class="toc-text">4.6.6 禁用其它五笔等输入法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-6-7-输入切换全-半角符号"><span class="toc-text">4.6.7 输入切换全/半角符号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-6-8-从剪切板中复制"><span class="toc-text">4.6.8 从剪切板中复制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-6-9-关闭窗口-程序"><span class="toc-text">4.6.9 关闭窗口/程序</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-7-删除楷体"><span class="toc-text">4.7 删除楷体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-8-创建ftp服务器"><span class="toc-text">4.8 创建ftp服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-9-开机自动挂载分区"><span class="toc-text">4.9 开机自动挂载分区</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-10-输入法的使用技巧"><span class="toc-text">4.10 输入法的使用技巧</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-11-开启aria2"><span class="toc-text">4.11 开启aria2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-11-BaiduPCS-Go"><span class="toc-text">4.11 BaiduPCS-Go</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-12-PATH与执行程序"><span class="toc-text">4.12 PATH与执行程序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-13-查找文件"><span class="toc-text">4.13 查找文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-14-安装指定版本的软件"><span class="toc-text">4.14 安装指定版本的软件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-15-网易云音乐的使用"><span class="toc-text">4.15 网易云音乐的使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-问题"><span class="toc-text">5. 问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-安装程序后不显示"><span class="toc-text">5.1 安装程序后不显示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-Open-JDK-环境变量配置和使用问题"><span class="toc-text">5.2 Open JDK 环境变量配置和使用问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-创建热点后，手机端不可见-热点无法使用"><span class="toc-text">5.3 创建热点后，手机端不可见/热点无法使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-雷柏v500键位不对"><span class="toc-text">5.4 雷柏v500键位不对</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-5-Typora无法正常复制"><span class="toc-text">5.5 Typora无法正常复制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-6-Ctrl-Alt-F10，突然黑屏"><span class="toc-text">5.6 Ctrl+Alt+F10，突然黑屏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-7-wireshark无法使用"><span class="toc-text">5.7 wireshark无法使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-8-权限不够"><span class="toc-text">5.8 权限不够</span></a></li></ol></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i> Just water water... </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        Linuxmint 体验之旅
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2018-02-03 21:16:24</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#Linux" title="Linux">Linux</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <h1 id="Linuxmint-体验之旅"><a href="#Linuxmint-体验之旅" class="headerlink" title="Linuxmint 体验之旅"></a>Linuxmint 体验之旅</h1><h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h2><ul>
+<li><p>安装</p>
+<p><a href="https://jingyan.baidu.com/article/9158e0003d7ba9a2541228cf.html" target="_blank" rel="noopener">教程</a></p>
+<blockquote>
+<p><strong>安装 Linux Mint时候，请断开网络！</strong><br>由于联网安装采用默认的软件源，更新速度会非常慢。而且，在线更新使用的是外国人的方案，根本不适合中文用户。安装了 Linux Mint 18 后，默认的菜单字体出现是楷体，很不美观。而断网安装的用户，则字体是标准的思源黑体。</p>
+</blockquote>
+</li>
+<li><p><a href="https://www.cnblogs.com/xiaoyulianjiao/p/5788468.html" target="_blank" rel="noopener">安装Linuxmint黑屏解决</a></p>
+<p>在启动时按e键修改grub启动项，  找到带<code>quiet splash --</code>那行，把<code>quiet splash --</code>删除，并在该行尾部加上<code>nomodeset nouveau.noaccel=1</code></p>
+<p>按F10启动，安装好之后，电脑重启时，也要加上“nomodeset”，之后进入系统后更新显卡驱动。</p>
+<p>在更新显卡驱动时，由于Linuxmint18去掉了对  AMD  显卡私有驱动的支持，仅采用开源驱动。</p>
+</li>
+<li><p>UEFI启动的可能需要切换回传统的启动方式</p>
+</li>
+</ul>
+<h2 id="2-更新源"><a href="#2-更新源" class="headerlink" title="2. 更新源"></a>2. 更新源</h2><ul>
+<li>使用root用户更新，无需确认y</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#deb cdrom:[Linux Mint 18.3 _Sylvia_ - Release amd64 20171127]/ xenial contrib main non-free</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#阿里云源</span></span><br><span class="line"><span class="comment"># deb cdrom:[Ubuntu 16.04 LTS _Xenial Xerus_ - Release amd64 (20160420.1)]/ xenial main restricted</span></span><br><span class="line">deb-src http://archive.ubuntu.com/ubuntu xenial main restricted</span><br><span class="line"></span><br><span class="line"><span class="comment">#Added by software-properties</span></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial main restricted</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ xenial main restricted multiverse universe </span><br><span class="line"></span><br><span class="line"><span class="comment">#Added by software-properties</span></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted multiverse universe</span><br><span class="line"></span><br><span class="line"><span class="comment">#Added by software-properties</span></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial universe</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial-updates universe</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial-updates multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse</span><br><span class="line"><span class="comment">#Added by software-properties</span></span><br><span class="line">deb http://archive.canonical.com/ubuntu xenial partner</span><br><span class="line">deb-src http://archive.canonical.com/ubuntu xenial partner</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted multiverse universe</span><br><span class="line"><span class="comment">#Added by software-properties</span></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial-security universe</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial-security multiverse</span><br><span class="line"></span><br><span class="line"><span class="comment">#网易源</span></span><br><span class="line">deb http://mirrors.163.com/ubuntu/ precise main restricted universe multiverse</span><br><span class="line">deb http://mirrors.163.com/ubuntu/ precise-security main restricted universe multiverse</span><br><span class="line">deb http://mirrors.163.com/ubuntu/ precise-updates main restricted universe multiverse</span><br><span class="line">deb http://mirrors.163.com/ubuntu/ precise-proposed main restricted universe multiverse</span><br><span class="line">deb http://mirrors.163.com/ubuntu/ precise-backports main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.163.com/ubuntu/ precise main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.163.com/ubuntu/ precise-security main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.163.com/ubuntu/ precise-updates main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.163.com/ubuntu/ precise-proposed main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.163.com/ubuntu/ precise-backports main restricted universe multiverse</span><br><span class="line"></span><br><span class="line"><span class="comment">#中科大源：</span></span><br><span class="line">deb http://debian.ustc.edu.cn/ubuntu/ trusty main multiverse restricted universe</span><br><span class="line">deb http://debian.ustc.edu.cn/ubuntu/ trusty-backports main multiverse restricted universe</span><br><span class="line">deb http://debian.ustc.edu.cn/ubuntu/ trusty-proposed main multiverse restricted universe</span><br><span class="line">deb http://debian.ustc.edu.cn/ubuntu/ trusty-security main multiverse restricted universe</span><br><span class="line">deb http://debian.ustc.edu.cn/ubuntu/ trusty-updates main multiverse restricted universe</span><br><span class="line">deb-src http://debian.ustc.edu.cn/ubuntu/ trusty main multiverse restricted universe</span><br><span class="line">deb-src http://debian.ustc.edu.cn/ubuntu/ trusty-backports main multiverse restricted universe</span><br><span class="line">deb-src http://debian.ustc.edu.cn/ubuntu/ trusty-proposed main multiverse restricted universe</span><br><span class="line">deb-src http://debian.ustc.edu.cn/ubuntu/ trusty-security main multiverse restricted universe</span><br><span class="line">deb-src http://debian.ustc.edu.cn/ubuntu/ trusty-updates main multiverse restricted universe</span><br><span class="line"></span><br><span class="line"><span class="comment">#东北大学源</span></span><br><span class="line">deb-src http://mirror.neu.edu.cn/ubuntu/ xenial main restricted</span><br><span class="line"><span class="comment">#Added by software-properties</span></span><br><span class="line">deb http://mirror.neu.edu.cn/ubuntu/ xenial main restricted</span><br><span class="line">deb-src http://mirror.neu.edu.cn/ubuntu/ xenial restricted multiverse universe</span><br><span class="line"><span class="comment">#Added by software-properties</span></span><br><span class="line">deb http://mirror.neu.edu.cn/ubuntu/ xenial-updates main restricted</span><br><span class="line">deb-src http://mirror.neu.edu.cn/ubuntu/ xenial-updates main restricted multiverse universe</span><br><span class="line"><span class="comment">#Added by software-properties</span></span><br><span class="line">deb http://mirror.neu.edu.cn/ubuntu/ xenial universe</span><br><span class="line">deb http://mirror.neu.edu.cn/ubuntu/ xenial-updates universe</span><br><span class="line">deb http://mirror.neu.edu.cn/ubuntu/ xenial multiverse</span><br><span class="line">deb http://mirror.neu.edu.cn/ubuntu/ xenial-updates multiverse</span><br><span class="line">deb http://mirror.neu.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse</span><br><span class="line">deb-src http://mirror.neu.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse</span><br><span class="line"><span class="comment">#Added by software-properties</span></span><br><span class="line">deb http://archive.canonical.com/ubuntu xenial partner</span><br><span class="line">deb-src http://archive.canonical.com/ubuntu xenial partner</span><br><span class="line">deb http://mirror.neu.edu.cn/ubuntu/ xenial-security main restricted</span><br><span class="line">deb-src http://mirror.neu.edu.cn/ubuntu/ xenial-security main restricted multiverse universe <span class="comment">#Added by software-properties</span></span><br><span class="line">deb http://mirror.neu.edu.cn/ubuntu/ xenial-security universe</span><br><span class="line">deb http://mirror.neu.edu.cn/ubuntu/ xenial-security multiverse</span><br><span class="line"></span><br><span class="line"><span class="comment">#清华大学源</span></span><br><span class="line"><span class="comment"># deb cdrom:[Ubuntu 16.04 LTS _Xenial Xerus_ - Release amd64 (20160420.1)]/ xenial main restricted</span></span><br><span class="line">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial main restricted</span><br><span class="line">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates main restricted</span><br><span class="line">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial universe</span><br><span class="line">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates universe</span><br><span class="line">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial multiverse</span><br><span class="line">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates multiverse</span><br><span class="line">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse</span><br><span class="line">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main restricted</span><br><span class="line">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security universe</span><br><span class="line">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security multiverse</span><br></pre></td></tr></table></figure>
+<h2 id="3-主机通过虚拟机转发上网"><a href="#3-主机通过虚拟机转发上网" class="headerlink" title="3. 主机通过虚拟机转发上网"></a>3. 主机通过虚拟机转发上网</h2><p>详见：<a href="https://github.com/dcLunatic/Network-learning" target="_blank" rel="noopener">Linux通过虚拟机上网</a></p>
+<p>原理：主机上的请求，全部丢到网关（虚拟机），再由虚拟机转发出去</p>
+<ul>
+<li><p>虚拟机上的操作</p>
+<p>新建一个有线连接，开启共享网络（需要防火墙开启）</p>
+<p>设置本地链接（以太网网卡）的ip（开启共享时，会自动修改这个ip）</p>
+</li>
+</ul>
+<ul>
+<li><p>主机上的操作</p>
+<p>新建一个有线连接，在IPV4处，填写以下信息</p>
+<p>DNS：8.8.8.8</p>
+<blockquote>
+<p>DNS无碍</p>
+</blockquote>
+<p>ipv4地址：虚拟机同一个网络段的ip</p>
+<p>子网掩码：与虚拟机同样</p>
+<blockquote>
+<p>ipv4及子网掩码的设置，只是为了确保：主机能与虚拟机相互ping通</p>
+<p>所以说，ip及掩码设成怎样都行，只要你能保证ping通就好！</p>
+</blockquote>
+<p>网关：虚拟机使用的ip</p>
+<blockquote>
+<p>这里不能乱改，必须是虚拟机使用的ip！</p>
+</blockquote>
+</li>
+<li><p>注意</p>
+<p>在所有设置都正确时，突然无法上网的话，可以把宽带断开再重连。</p>
+<p>也可以试试重启虚拟机。</p>
+<p>切记要打开kde网络设置中wifi左边那个开关，具体啥作用还不知道</p>
+</li>
+</ul>
+<h2 id="4-操作"><a href="#4-操作" class="headerlink" title="4. 操作"></a>4. 操作</h2><h3 id="4-1-新建文件模板"><a href="#4-1-新建文件模板" class="headerlink" title="4.1 新建文件模板"></a>4.1 <a href="http://forum.ubuntu.org.cn/viewtopic.php?f=38&amp;t=288062" target="_blank" rel="noopener">新建文件模板</a></h3><p>右键创建一个“新建脚本”，在/usr/share/templates/中建立一个新文件shell.desktop，文件内容如下：</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[Desktop Entry]</span></span><br><span class="line"><span class="attr">Encoding</span>=UTF-<span class="number">8</span></span><br><span class="line"><span class="attr">Name</span>=新建脚本.sh</span><br><span class="line"><span class="attr">Comment[zh_CN]</span>=新建脚本</span><br><span class="line"><span class="attr">Type</span>=Link</span><br><span class="line"><span class="attr">URL</span>=.source/script.sh</span><br><span class="line"><span class="attr">Icon</span>=konsole</span><br></pre></td></tr></table></figure>
+<p> 然后在/usr/share/templates/.source/中新建一个文件script.sh（名字和上面shell.desktop里面的url项指定的相同），就是一个空脚本，内容如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>作用： 点击“新建脚本时”</p>
+<p>默认创建一个“新建脚本.sh”，内容是script.sh的内容，即<code>#!/bin/bash</code></p>
+</blockquote>
+<h3 id="4-2-切换root用户"><a href="#4-2-切换root用户" class="headerlink" title="4.2 切换root用户"></a>4.2 切换root用户</h3><ul>
+<li>sudo 命令</li>
+<li>sudo su</li>
+</ul>
+<h3 id="4-3-常用软件的英文名称"><a href="#4-3-常用软件的英文名称" class="headerlink" title="4.3 常用软件的英文名称"></a>4.3 常用软件的英文名称</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">中文含义</th>
+<th style="text-align:center">英文命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">终端</td>
+<td style="text-align:center">konsole</td>
+</tr>
+<tr>
+<td style="text-align:center">文本编辑器</td>
+<td style="text-align:center">kate</td>
+</tr>
+<tr>
+<td style="text-align:center">文件管理器</td>
+<td style="text-align:center">dolphin</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-4-虚拟机"><a href="#4-4-虚拟机" class="headerlink" title="4.4 虚拟机"></a>4.4 虚拟机</h3><h4 id="4-4-1-无法拖拽文件"><a href="#4-4-1-无法拖拽文件" class="headerlink" title="4.4.1 无法拖拽文件"></a>4.4.1 无法拖拽文件</h4><ul>
+<li><p>法一</p>
+<p>增强器可能没启动，重启下虚拟机里的系统即可！</p>
+</li>
+<li><p>法二</p>
+<p>重启VBoxTray.exe</p>
+</li>
+</ul>
+<h4 id="4-4-2-返回主机"><a href="#4-4-2-返回主机" class="headerlink" title="4.4.2 返回主机"></a>4.4.2 返回主机</h4><p>右Ctrl</p>
+<h4 id="4-4-3-更换微信提示声音"><a href="#4-4-3-更换微信提示声音" class="headerlink" title="4.4.3 更换微信提示声音"></a>4.4.3 更换微信提示声音</h4><ul>
+<li><p>详见</p>
+<p><a href="http://blog.sina.com.cn/s/blog_e5c6a0ea0102xfx2.html" target="_blank" rel="noopener">微信电脑版怎么修改信息提示音</a></p>
+<p><a href="http://xiazai.zol.com.cn/detail/3/27055.shtml" target="_blank" rel="noopener">eXeScope 6.50汉化版</a></p>
+<p><a href="http://www.lnpan.com/" target="_blank" rel="noopener">铃声</a></p>
+<p><a href="https://www.aconvert.com/cn/audio/mp3-to-wav/" target="_blank" rel="noopener">mp3转wav</a></p>
+</li>
+<li><p>注意</p>
+<p>直接转换的wav文件太大（太大的文件无法成功替换资源），需要设置采样率为最低，才能减少文件大小</p>
+</li>
+</ul>
+<h3 id="4-5-截图工具"><a href="#4-5-截图工具" class="headerlink" title="4.5 截图工具"></a>4.5 截图工具</h3><h4 id="4-5-1-deepin-scrot"><a href="#4-5-1-deepin-scrot" class="headerlink" title="4.5.1 deepin-scrot"></a>4.5.1 deepin-scrot</h4><ul>
+<li><p>介绍</p>
+<p>这货长得像qq截图工具很棒的</p>
+</li>
+<li><p>安装</p>
+<p><code>deepin-scrot</code></p>
+</li>
+</ul>
+<h4 id="4-5-2-spectacle"><a href="#4-5-2-spectacle" class="headerlink" title="4.5.2 spectacle"></a>4.5.2 spectacle</h4><ul>
+<li><p>介绍</p>
+<p>方形截图，指针看不清</p>
+<ul>
+<li><p>安装</p>
+<p>自带的</p>
+</li>
+<li><p>命令<br>| 英文命令      | 中文含义  |<br>| —————- | ———- |<br>| -f, –fullscreen        | 抓取整个桌面 (默认) |<br>| -m, –current           | 抓取当前屏幕       |<br>| -a, –activewindow      | 抓取活动窗口       |<br>| -u, –windowundercursor | 抓取鼠标指针位置的窗口，包括父窗口的弹出菜单   |<br>| -t, –transientonly     | 抓取鼠标指针位置的窗口，不包括父窗口的弹出菜单 |</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="4-5-3-shutter"><a href="#4-5-3-shutter" class="headerlink" title="4.5.3 shutter"></a>4.5.3 shutter</h4><ul>
+<li><p>安装</p>
+<figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo<span class="built_in"> add-apt-repository </span>ppa:shutter/ppa</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install shutte</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>命令及含义</p>
+<p>|           中文含义           |     英文命令     |<br>| :————————–: | :————–: |<br>|       抓取当前活动窗口       |    shutter -a    |<br>|         抓取整个屏幕         |    shutter -f    |<br>|         鼠标画框抓取         |    shutter -s    |<br>| 抓取任意活动窗口（不起作用） | shutter -section |<br>|           抓取网页           |  shutter –web   |</p>
+</li>
+</ul>
+<h3 id="4-6-KDE"><a href="#4-6-KDE" class="headerlink" title="4.6 KDE"></a>4.6 KDE</h3><h4 id="4-6-1-窗口平铺"><a href="#4-6-1-窗口平铺" class="headerlink" title="4.6.1 窗口平铺"></a>4.6.1 窗口平铺</h4><p>ctrl F8/9/0</p>
+<h4 id="4-6-2-窗口最小化"><a href="#4-6-2-窗口最小化" class="headerlink" title="4.6.2 窗口最小化"></a>4.6.2 窗口最小化</h4><p> 添加最小化小部件，设置快捷键</p>
+<h4 id="4-6-3-切换输入法皮肤"><a href="#4-6-3-切换输入法皮肤" class="headerlink" title="4.6.3 切换输入法皮肤"></a>4.6.3 切换输入法皮肤</h4><p>在系统面板中找到输入法（也有可能隐藏了），右键-&gt;皮肤</p>
+<h4 id="4-6-4-拖拽图标"><a href="#4-6-4-拖拽图标" class="headerlink" title="4.6.4 拖拽图标"></a>4.6.4 拖拽图标</h4><p>移至图标<strong>右上角</strong>，按至左键即可拖动</p>
+<h4 id="4-6-5-更改图标大小"><a href="#4-6-5-更改图标大小" class="headerlink" title="4.6.5 更改图标大小"></a>4.6.5 更改图标大小</h4><p>鼠标左键，长按图标</p>
+<h4 id="4-6-6-禁用其它五笔等输入法"><a href="#4-6-6-禁用其它五笔等输入法" class="headerlink" title="4.6.6 禁用其它五笔等输入法"></a>4.6.6 禁用其它五笔等输入法</h4><p>打开输入法配置，左侧是可使用的输入法，右侧是目前使用的输入法</p>
+<p>把五笔移动至左侧即可</p>
+<h4 id="4-6-7-输入切换全-半角符号"><a href="#4-6-7-输入切换全-半角符号" class="headerlink" title="4.6.7 输入切换全/半角符号"></a>4.6.7 输入切换全/半角符号</h4><p>中文状态，启用英文符号</p>
+<p><code>ctrl .</code></p>
+<h4 id="4-6-8-从剪切板中复制"><a href="#4-6-8-从剪切板中复制" class="headerlink" title="4.6.8 从剪切板中复制"></a>4.6.8 从剪切板中复制</h4><p><code>ctrl ;</code></p>
+<h4 id="4-6-9-关闭窗口-程序"><a href="#4-6-9-关闭窗口-程序" class="headerlink" title="4.6.9 关闭窗口/程序"></a>4.6.9 关闭窗口/程序</h4><ul>
+<li><p>关闭窗口</p>
+<p>标准快捷键：<code>ctrl w</code></p>
+</li>
+<li><p>关闭程序</p>
+<p>全局快捷点-&gt;kwin：<code>alt f4</code></p>
+</li>
+</ul>
+<h3 id="4-7-删除楷体"><a href="#4-7-删除楷体" class="headerlink" title="4.7 删除楷体"></a>4.7 删除楷体</h3><ul>
+<li><p>测试可行</p>
+ <figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt remove <span class="built_in">fonts</span>-arphic-ukai <span class="built_in">fonts</span>-arphic-uming</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>未测试</p>
+ <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="builtin-name">get</span> install language-selector-*</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="4-8-创建ftp服务器"><a href="#4-8-创建ftp服务器" class="headerlink" title="4.8 创建ftp服务器"></a>4.8 创建ftp服务器</h3><ol>
+<li><p>安装vsftpd</p>
+<p><code>apt install vsftpd</code></p>
+</li>
+<li><p>启动/关闭/重启/状态</p>
+<p><code>service vsftp start/restart/stop/status</code></p>
+</li>
+<li><p>配置文件</p>
+<ul>
+<li><p>/etc/vsftpd.conf</p>
+<ul>
+<li><p>匿名访问</p>
+<p>匿名登陆，详见：</p>
+<ul>
+<li><a href="https://blog.csdn.net/neonlight/article/details/5975764" target="_blank" rel="noopener">vsftpd匿名用户上传和下载的配置</a></li>
+<li><a href="https://www.jianshu.com/p/f90e0f81134b" target="_blank" rel="noopener">CentOS 6.3 下 vsftpd 匿名用户访问配置</a></li>
+</ul>
+</li>
+<li><p>系统用户访问</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 这个是登陆后访问的主目录</span></span><br><span class="line"><span class="attr">local_root</span>=/xxxxx</span><br><span class="line"><span class="attr">chroot_local_user</span>=<span class="literal">YES</span></span><br></pre></td></tr></table></figure>
+<p>仅是上面的命令时，会报错：<a href="https://blog.csdn.net/u010383786/article/details/69526413" target="_blank" rel="noopener">vsftpd：500 OOPS: vsftpd: refusing to run with writable root inside chroot ()</a></p>
+<p>解决方法：添加<code>allow_writeable_chroot=YES</code></p>
+<p>关于chroot，详见：<a href="https://blog.csdn.net/u010383786/article/details/69526413" target="_blank" rel="noopener">默认配置路径</a></p>
+</li>
+<li><p>监狱</p>
+<p>详见：<a href="http://blog.sina.com.cn/s/blog_12d07a0be0102v0zz.html" target="_blank" rel="noopener">vsftpd配置chroot、限制登录用户的问题</a></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>测试</p>
+<ol>
+<li><p>启动服务</p>
+<p><code>service vsftpd start</code></p>
+</li>
+<li><p>查看本地ip（使用etherent，wan卡的ip都行）</p>
+<p><code>ifconfig</code></p>
+</li>
+<li><p>本地登陆</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ftp</span> 本地<span class="selector-tag">ip</span>或127<span class="selector-class">.0</span><span class="selector-class">.0</span><span class="selector-class">.1</span></span><br><span class="line">输入用户名</span><br><span class="line">输入密码</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>如果无法登陆，查看上面的报错，一般来说都是配置出了问题</p>
+</blockquote>
+</li>
+<li><p>手机访问</p>
+<blockquote>
+<p>据我所知，手机与电脑也只能通过wifi达到处在同一局域网的效果</p>
+<p>所以，这里的主机本地ip，一般指的是wan卡中的ip</p>
+</blockquote>
+<ul>
+<li><p>FX文件管理器</p>
+<p>网络-ftp服务器-输入主机本地ip及其他信息</p>
+<p>默认配置下，中文会乱码</p>
+<p>需要添加<code>utf8_filesystem=YES</code></p>
+</li>
+<li><p>ES文件管理器</p>
+<p>网络-ftp-自动搜索-长按编辑登陆信息</p>
+<p>默认配置下，中文不会乱码</p>
+</li>
+</ul>
+</li>
+<li><p>用途</p>
+<p>手机管理/浏览电脑端的文件</p>
+<p>文件管理器也支持创建ftp服务器，这样的话，也方便电脑端对手机进行文件的管理</p>
+</li>
+<li><p>相关链接</p>
+<ol>
+<li><a href="https://www.linuxidc.com/Linux/2017-06/144900.htm" target="_blank" rel="noopener">Linux下使用vsftp搭建FTP服务器实现文件共享</a></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="4-9-开机自动挂载分区"><a href="#4-9-开机自动挂载分区" class="headerlink" title="4.9 开机自动挂载分区"></a>4.9 开机自动挂载分区</h3><p>详见：<a href="https://blog.csdn.net/up_com/article/details/51264872" target="_blank" rel="noopener">ubuntu14.04设置开机自动挂载硬盘分区－wd</a></p>
+<ul>
+<li><p>blkid</p>
+<p>通过此命令，查看硬盘uuid</p>
+</li>
+<li><p>修改/etc/fstab</p>
+<p><code>UUID=具体的uuid 被挂载的目录 硬盘格式 defaults 0 0</code></p>
+<blockquote>
+<p>被挂载的目录中，不能含有中文名字</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="4-10-输入法的使用技巧"><a href="#4-10-输入法的使用技巧" class="headerlink" title="4.10 输入法的使用技巧"></a>4.10 输入法的使用技巧</h3><p>一般建议，使用Shift进行输入法的中/英文切换！</p>
+<p>这样的切换，按Shift就又可回中/英文！</p>
+<p>使用组合键的切换时，在切到中文时，无法使用Shift切到英文，只能使用组合键切换！</p>
+<h3 id="4-11-开启aria2"><a href="#4-11-开启aria2" class="headerlink" title="4.11 开启aria2"></a>4.11 开启aria2</h3><ul>
+<li><p>安装</p>
+<p><code>sudo apt install aria2c</code></p>
+</li>
+<li><p>配置文件</p>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br></pre></td><td class="code"><pre><span class="line">#####################################################################  文件保存相关</span><br><span class="line"></span><br><span class="line"># 文件的保存路径(可使用绝对路径或相对路径)，默认: 当前启动位置</span><br><span class="line">dir=/home/adj/下载/</span><br><span class="line"></span><br><span class="line"># 启用磁盘缓存，<span class="number">0</span>为禁用缓存，需<span class="number">1.16</span>以上版本，默认:<span class="number">16</span>M</span><br><span class="line">#disk-cache=<span class="number">32</span>M</span><br><span class="line"></span><br><span class="line"># 文件预分配方式，能有效降低磁盘碎片，默认:prealloc</span><br><span class="line"># 预分配所需时间: none &lt; falloc ? trunc &lt; prealloc</span><br><span class="line"># falloc和trunc则需要文件系统和内核支持</span><br><span class="line"># NTFS建议使用falloc，EXT3/<span class="number">4</span>建议trunc，MAC下需要注释此项</span><br><span class="line">file-allocation=none</span><br><span class="line"></span><br><span class="line"># 断点续传</span><br><span class="line">continue=true</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">##################################################################### 下载连接相关</span><br><span class="line"></span><br><span class="line"># 最大同时下载任务数，运行时可修改，默认:<span class="number">5</span></span><br><span class="line">#max-concurrent-downloads=<span class="number">5</span></span><br><span class="line"></span><br><span class="line"># 同一服务器连接数，添加时可指定，默认:<span class="number">1</span></span><br><span class="line">max-connection-per-server=<span class="number">16</span></span><br><span class="line"></span><br><span class="line"># 最小文件分片大小，添加时可指定，取值范围<span class="number">1</span>M <span class="number">-1024</span>M，默认:<span class="number">20</span>M</span><br><span class="line"># 假定size=<span class="number">10</span>M，文件为<span class="number">20</span>MiB 则使用两个来源下载; 文件为<span class="number">15</span>MiB 则使用一个来源下载</span><br><span class="line">min-split-size=<span class="number">10</span>M</span><br><span class="line"></span><br><span class="line"># 单个任务最大线程数，添加时可指定，默认:<span class="number">5</span></span><br><span class="line">#split=<span class="number">5</span></span><br><span class="line"></span><br><span class="line"># 整体下载速度限制，运行时可修改，默认:<span class="number">0</span></span><br><span class="line">#max-overall-download-limit=<span class="number">0</span></span><br><span class="line"></span><br><span class="line"># 单个任务下载速度限制，默认:<span class="number">0</span></span><br><span class="line">#max-download-limit=<span class="number">0</span></span><br><span class="line"></span><br><span class="line"># 整体上传速度限制，运行时可修改，默认:<span class="number">0</span></span><br><span class="line">#max-overall-upload-limit=<span class="number">0</span></span><br><span class="line"></span><br><span class="line"># 单个任务上传速度限制，默认:<span class="number">0</span></span><br><span class="line">#max-upload-limit=<span class="number">0</span></span><br><span class="line"></span><br><span class="line"># 禁用IPv6，默认:false</span><br><span class="line">#disable-ipv6=true</span><br><span class="line"></span><br><span class="line"># 连接超时时间，默认:<span class="number">60</span></span><br><span class="line">#timeout=<span class="number">60</span></span><br><span class="line"></span><br><span class="line"># 最大重试次数，设置为<span class="number">0</span>表示不限制重试次数，默认:<span class="number">5</span></span><br><span class="line">#max-tries=<span class="number">5</span></span><br><span class="line"></span><br><span class="line"># 设置重试等待的秒数，默认:<span class="number">0</span></span><br><span class="line">#retry-wait=<span class="number">0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">##################################################################### 进度保存相关</span><br><span class="line"></span><br><span class="line"># 从会话文件中读取下载任务</span><br><span class="line">input-file=/home/adj/aria2/aria2.session</span><br><span class="line"># 在Aria2退出时保存`错误/未完成`的下载任务到会话文件</span><br><span class="line">save-session=/home/adj/aria2/aria2.session</span><br><span class="line"># 定时保存会话，<span class="number">0</span>为退出时才保存，需<span class="number">1.16</span><span class="number">.1</span>以上版本，默认:<span class="number">0</span></span><br><span class="line">#save-session-interval=<span class="number">60</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#####################################################################RPC相关设置</span><br><span class="line"></span><br><span class="line"># 启用RPC，默认:false</span><br><span class="line">enable-rpc=true</span><br><span class="line"></span><br><span class="line"># 允许所有来源，默认:false</span><br><span class="line">rpc-allow-origin-all=true</span><br><span class="line"></span><br><span class="line"># 允许非外部访问，默认:false</span><br><span class="line">rpc-listen-all=true</span><br><span class="line"></span><br><span class="line"># 事件轮询方式，取值:[epoll，kqueue，port，poll，select]，不同系统默认值不同</span><br><span class="line">#event-poll=select</span><br><span class="line"></span><br><span class="line"># RPC监听端口，端口被占用时可以修改，默认:<span class="number">6800</span></span><br><span class="line">#rpc-listen-port=<span class="number">6800</span></span><br><span class="line"></span><br><span class="line"># 设置的RPC授权令牌，v1<span class="number">.18</span><span class="number">.4</span>新增功能，取代 --rpc-user 和 --rpc-passwd 选项</span><br><span class="line">#rpc-secret=&lt;TOKEN&gt;</span><br><span class="line"></span><br><span class="line"># 设置的RPC访问用户名，此选项新版已废弃，建议改用 --rpc-secret 选项</span><br><span class="line">#rpc-user=&lt;USER&gt;</span><br><span class="line"></span><br><span class="line"># 设置的RPC访问密码，此选项新版已废弃，建议改用 --rpc-secret 选项</span><br><span class="line">#rpc-passwd=&lt;PASSWD&gt;</span><br><span class="line"></span><br><span class="line"># 是否启用 RPC 服务的 SSL/TLS 加密，</span><br><span class="line"># 启用加密后 RPC 服务需要使用 https 或者 wss 协议连接</span><br><span class="line">#rpc-secure=true</span><br><span class="line"></span><br><span class="line"># 在 RPC 服务中启用 SSL/TLS 加密时的证书文件，</span><br><span class="line"># 使用 PEM 格式时，您必须通过 --rpc-private-key 指定私钥</span><br><span class="line">#rpc-certificate=/path/to/certificate.pem</span><br><span class="line"></span><br><span class="line"># 在 RPC 服务中启用 SSL/TLS 加密时的私钥文件</span><br><span class="line">#rpc-private-key=/path/to/certificate.key</span><br><span class="line"></span><br><span class="line">##################################################################### BT/PT下载相关</span><br><span class="line"></span><br><span class="line"># 当下载的是一个种子(以.torrent结尾)时，自动开始BT任务，默认:true</span><br><span class="line">#follow-torrent=true</span><br><span class="line"></span><br><span class="line"># BT监听端口，当端口被屏蔽时使用，默认:<span class="number">6881</span><span class="number">-6999</span></span><br><span class="line">listen-port=<span class="number">51413</span></span><br><span class="line"></span><br><span class="line"># 单个种子最大连接数，默认:<span class="number">55</span></span><br><span class="line">#bt-max-peers=<span class="number">55</span></span><br><span class="line"></span><br><span class="line"># 打开DHT功能，PT需要禁用，默认:true</span><br><span class="line">enable-dht=false</span><br><span class="line"></span><br><span class="line"># 打开IPv6 DHT功能，PT需要禁用</span><br><span class="line">#enable-dht6=false</span><br><span class="line"></span><br><span class="line"># DHT网络监听端口，默认:<span class="number">6881</span><span class="number">-6999</span></span><br><span class="line">#dht-listen-port=<span class="number">6881</span><span class="number">-6999</span></span><br><span class="line"></span><br><span class="line"># 本地节点查找，PT需要禁用，默认:false</span><br><span class="line">#bt-enable-lpd=false</span><br><span class="line"></span><br><span class="line"># 种子交换，PT需要禁用，默认:true</span><br><span class="line">enable-peer-exchange=false</span><br><span class="line"></span><br><span class="line"># 每个种子限速，对少种的PT很有用，默认:<span class="number">50</span>K</span><br><span class="line">#bt-request-peer-speed-limit=<span class="number">50</span>K</span><br><span class="line"></span><br><span class="line"># 客户端伪装，PT需要</span><br><span class="line">peer-id-prefix=-TR2770-</span><br><span class="line">user-agent=Transmission/<span class="number">2.77</span></span><br><span class="line"></span><br><span class="line"># 当种子的分享率达到这个数时，自动停止做种，<span class="number">0</span>为一直做种，默认:<span class="number">1.0</span></span><br><span class="line">seed-ratio=<span class="number">0</span></span><br><span class="line"></span><br><span class="line"># 强制保存会话，即使任务已经完成，默认:false</span><br><span class="line"># 较新的版本开启后会在任务完成后依然保留.aria2文件</span><br><span class="line">#force-save=false</span><br><span class="line"></span><br><span class="line"># BT校验相关，默认:true</span><br><span class="line">#bt-hash-check-seed=true</span><br><span class="line"></span><br><span class="line"># 继续之前的BT任务时，无需再次校验，默认:false</span><br><span class="line">bt-seed-unverified=true</span><br><span class="line"></span><br><span class="line"># 保存磁力链接元数据为种子文件(.torrent文件)，默认:false</span><br><span class="line">bt-save-metadata=true</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用</p>
+<ul>
+<li><p>简单下载</p>
+<p><code>aria2 -d 保存的目录 “下载链接”</code></p>
+</li>
+<li><p>RPC模式</p>
+<p><code>aria2 --conf-path=配置文件路径</code></p>
+<p>允许airia2后台运行，-D</p>
+<p><code>aria2 --conf-path=配置文件路径 -D</code>  </p>
+</li>
+</ul>
+</li>
+<li><p>教程</p>
+<p><a href="https://zhuanlan.zhihu.com/p/30666881" target="_blank" rel="noopener">Aria2基础上手指南</a></p>
+</li>
+</ul>
+<h3 id="4-11-BaiduPCS-Go"><a href="#4-11-BaiduPCS-Go" class="headerlink" title="4.11 BaiduPCS-Go"></a>4.11 BaiduPCS-Go</h3><ul>
+<li><p>下载</p>
+<p>项目主页：<a href="https://github.com/iikira/BaiduPCS-Go" target="_blank" rel="noopener">BaiduPCS-Go</a></p>
+<p>发布主页：<a href="https://github.com/iikira/BaiduPCS-Go/releases" target="_blank" rel="noopener">BaiduPCS-Go Realses</a></p>
+</li>
+<li><p>使用</p>
+<p>Windows直接点击exe，就可进入命令行界面</p>
+<p>Linux需要在终端输入<code>BaiduPCS-Go的路径</code>来打开BaiduPCS-Go，必须是完整路径</p>
+<p>或者切到BaiduPCS-Go所在的目录下，输入<code>./BaiduPCS-Go</code>来打开BaiduPCS-Go</p>
+<p>也可以创建软链接到<code>usr/bin/</code>，这样的话，就可以直接不用输入完整路径，仅输入BaiduPCS-Go就可进入下命令行界面</p>
+</li>
+</ul>
+<h3 id="4-12-PATH与执行程序"><a href="#4-12-PATH与执行程序" class="headerlink" title="4.12 PATH与执行程序"></a>4.12 PATH与执行程序</h3><ul>
+<li><p>PATH</p>
+<p>终端执行<code>$PATH</code>查看系统环境变量，在终端输入的<code>程序名</code>都会到环境变量中的目录中的目录找一次，有就执行，没有就提示不存在！</p>
+</li>
+<li><p>假设程序叫APP，所在目录是<code>/home/adj/程序/</code></p>
+<ul>
+<li>程序在环境变量的某个目录中，输入<code>APP</code></li>
+<li>环境不在环境变量的任何目录中<ul>
+<li>输入<code>/home/adj/程序/APP</code></li>
+<li>切到<code>/home/adj/程序/</code>，输入<code>./APP</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>PATH与当前目录</p>
+<p><code>.</code>代表当前目录，只要把其添加到PATH中，在程序所在的目录下时，就可以直接输入<code>APP</code></p>
+<p>当不建议这样做，假如当前目录有个<code>cd</code>的病毒文件，在我们输入<code>cd</code>时，由于系统会在当前目录下找，所以有可能会先执行不正确的<code>cd</code>病毒文件，这时候，我们就gg了！</p>
+<p>详见：《鸟叔的Linux私房菜》的11章的1.3节</p>
+</li>
+<li><p>设置环境变量</p>
+<p>详见：<a href="https://www.jianshu.com/p/ac2bc0ad3d74" target="_blank" rel="noopener">Linux环境变量总结</a></p>
+</li>
+</ul>
+<h3 id="4-13-查找文件"><a href="#4-13-查找文件" class="headerlink" title="4.13 查找文件"></a>4.13 查找文件</h3><p>详见：<a href="https://blog.csdn.net/wzzfeitian/article/details/40985549" target="_blank" rel="noopener">Linux下各种查找命令（find, grep, which, whereis, locate）</a></p>
+<h3 id="4-14-安装指定版本的软件"><a href="#4-14-安装指定版本的软件" class="headerlink" title="4.14 安装指定版本的软件"></a>4.14 安装指定版本的软件</h3><ul>
+<li><p>查看可安装版本</p>
+<p><code>apt-cache policy app</code></p>
+</li>
+<li><p>安装指定版本</p>
+<p><code>apt install app=0.9.48-1</code></p>
+</li>
+<li><p>更多</p>
+<p>详见：<a href="http://forum.ubuntu.org.cn/viewtopic.php?f=77&amp;t=133010&amp;sid=d4200a0dea9219c2f9b50039fd8824b9" target="_blank" rel="noopener">apt-get install 的一个疑问</a></p>
+</li>
+</ul>
+<h3 id="4-15-网易云音乐的使用"><a href="#4-15-网易云音乐的使用" class="headerlink" title="4.15 网易云音乐的使用"></a>4.15 网易云音乐的使用</h3><p>直接点图标，无法使用，即使加<code>--no sandbox</code>也一样！、</p>
+<p>只能使用超级用户启动网易云音乐</p>
+<p><code>sudo netease-could-music &amp;</code></p>
+<p>加<code>&amp;</code>，可以让程序后台运行</p>
+<h2 id="5-问题"><a href="#5-问题" class="headerlink" title="5. 问题"></a>5. 问题</h2><h3 id="5-1-安装程序后不显示"><a href="#5-1-安装程序后不显示" class="headerlink" title="5.1 安装程序后不显示"></a>5.1 安装程序后不显示</h3><p>安装软件，无论是deb包或者是从软件市场安装，都不会在kde程序菜单中显示。</p>
+<figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="built_in">get</span> <span class="keyword">update</span></span><br><span class="line">sudo apt-<span class="built_in">get</span> <span class="keyword">update</span> --reinstall plasma-workspace</span><br></pre></td></tr></table></figure>
+<h3 id="5-2-Open-JDK-环境变量配置和使用问题"><a href="#5-2-Open-JDK-环境变量配置和使用问题" class="headerlink" title="5.2 Open JDK 环境变量配置和使用问题"></a>5.2 Open JDK 环境变量配置和使用问题</h3><p>我个人安装的Linux Mint 18.1 自带的Open JDK 8不完整，在终端输入一下命令更新完整包：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="builtin-name">get</span> install openjdk-8-jdk</span><br></pre></td></tr></table></figure>
+<h3 id="5-3-创建热点后，手机端不可见-热点无法使用"><a href="#5-3-创建热点后，手机端不可见-热点无法使用" class="headerlink" title="5.3 创建热点后，手机端不可见/热点无法使用"></a>5.3 创建热点后，手机端不可见/热点无法使用</h3><ol>
+<li><p>系统自带热点</p>
+<ul>
+<li><p>教程</p>
+<p>详见：<a href="http://www.cnblogs.com/king-ding/p/ubuntuWIFI.html" target="_blank" rel="noopener">超简单让ubuntu开启wifi热点(亲测16.04与14.04可用)</a></p>
+</li>
+<li><p>创建热点后，手机端不可见</p>
+<p>关键点：</p>
+<ul>
+<li>模式：热点/接入点</li>
+<li>电脑连上刚创建的wifi，手机才能看到那wifi</li>
+</ul>
+</li>
+<li><p>热点无法使用</p>
+<p>稍等一会试试</p>
+<p>断开宽带，再连接热点试试</p>
+</li>
+<li><p>体验</p>
+<p>体验很差，一开始能用，后来就突然无法使用，倒是能使用vsftpd的服务</p>
+<p>可是无法上网，只有连上热点的一瞬间，能上网</p>
+<p>看过路由转发表，没有错误，目标是无线网卡所在的ip的，都转发到了0.0.0.0</p>
+<p>一瞬间能上网、能使用vsftpd，其实也证明了电脑与手机能相互通信</p>
+<p>无法上网，我想过是驱动问题</p>
+<p>也试过安装新的驱动，安装一些乱七八糟的，最后没搞成功</p>
+<p>也看过系统日志，开启热点时，无法构造信号或无法取得对象</p>
+<p>相关：<a href="https://askubuntu.com/questions/563647/ubuntu-12-04-no-wlan0-interface" target="_blank" rel="noopener">Ubuntu 12.04 no wlan0 interface</a> </p>
+</li>
+</ul>
+</li>
+</ol>
+<ol start="2">
+<li><p>使用hostapd开热点</p>
+<ul>
+<li><p>教程</p>
+<p><a href="https://blog.csdn.net/gsls200808/article/details/39370597" target="_blank" rel="noopener">ubuntu14.04开启wifi热点</a></p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="5-4-雷柏v500键位不对"><a href="#5-4-雷柏v500键位不对" class="headerlink" title="5.4 雷柏v500键位不对"></a>5.4 雷柏v500键位不对</h3><p>首先，看看windows锁定键有没有亮，亮的话按下它关闭锁定。</p>
+<p>不行的话，详见：<a href="http://www.myefly.com/linux-rapoo-v500-issue.html" target="_blank" rel="noopener">解决雷柏V500机械键盘在LINUX系统中CTRL/ALT等键被错误映射成SHIFT的问题</a></p>
+<h3 id="5-5-Typora无法正常复制"><a href="#5-5-Typora无法正常复制" class="headerlink" title="5.5 Typora无法正常复制"></a>5.5 Typora无法正常复制</h3><p>应该是版本有bug，我装的0.9.51-1，有些网页无法正常复制为md格式。</p>
+<p>解决方法：装旧版0.9.48-1。</p>
+<p>命令：<code>apt install typora=0.9.48-1</code></p>
+<h3 id="5-6-Ctrl-Alt-F10，突然黑屏"><a href="#5-6-Ctrl-Alt-F10，突然黑屏" class="headerlink" title="5.6 Ctrl+Alt+F10，突然黑屏"></a>5.6 Ctrl+Alt+F10，突然黑屏</h3><p>这一类快捷键用于切换桌面</p>
+<p>Ctrl+Alt+F7切回当前桌面</p>
+<p>详见：<a href="https://ubuntuforums.org/showthread.php?t=1167144" target="_blank" rel="noopener">Why does Shift-Ctrl-Alt-F10 kill my desktop?</a></p>
+<h3 id="5-7-wireshark无法使用"><a href="#5-7-wireshark无法使用" class="headerlink" title="5.7 wireshark无法使用"></a>5.7 wireshark无法使用</h3><ul>
+<li><p>you don’t have permission to capture on that device</p>
+<p><a href="https://blog.csdn.net/huangpin815/article/details/76851227" target="_blank" rel="noopener">https://blog.csdn.net/huangpin815/article/details/76851227</a></p>
+</li>
+<li><p>failed to set hardware filter to promiscuous mode</p>
+<p><a href="https://blog.csdn.net/cscmaker/article/details/7240486" target="_blank" rel="noopener">https://blog.csdn.net/cscmaker/article/details/7240486</a></p>
+</li>
+<li><p>dofile has been disabled due to running Wireshark as superuser.</p>
+<p><a href="https://www.cnblogs.com/tom-and-jerry/p/3957193.html" target="_blank" rel="noopener">https://www.cnblogs.com/tom-and-jerry/p/3957193.html</a></p>
+</li>
+</ul>
+<h3 id="5-8-权限不够"><a href="#5-8-权限不够" class="headerlink" title="5.8 权限不够"></a>5.8 权限不够</h3><p>给文件file加上可执行权限： <code>chmod +x file</code></p>
+
+        
+            <div class="donate-container">
+    <div class="donate-button">
+        <button id="donate-button">赞赏</button>
+    </div>
+    <div class="donate-img-container hide" id="donate-img-container">
+        <img id="donate-img" src="" data-src="/">
+        <p> 感谢鼓励 </p>
+    </div>
+</div>
+        
+        <div id="comment-container">
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+        <li>
+            <a target="_blank" href="http://weibo.com/2736899077">
+                            <span class="fa-stack fa-lg">
+                                  <i class="iconfont icon-weibo"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+        
+        <li>
+            <a target="_blank"  href="https://github.com/Adj325">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span>/</span>
+        
+        <span><a href="https://rovo98.github.io/">rovo98&#39;s Blog</a></span>
+        <span>/</span>
+        
+        <span><a href="https://dcLunatic.github.io/">dcLunatic&#39;s Blog</a></span>
+        <span>/</span>
+        
+    </p>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script src="/js/gitment.js"></script>
+<script>
+    var gitment = new Gitment({
+        id: 'Linuxmint 体验之旅',
+        owner: 'Adj325',
+        repo: 'hexo-aircloud-blog',
+        oauth: {
+            client_id: 'your-id-created-by-https://github.com/settings/applications/new',
+            client_secret: 'your-secret-created-by-https://github.com/settings/applications/new',
+        },
+    })
+    gitment.render('comment-container')
+</script>
+
+</html>
