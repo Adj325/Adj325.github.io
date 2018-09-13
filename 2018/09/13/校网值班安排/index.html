@@ -11,7 +11,7 @@
 
     <title>
         
-        Adj325的博客 | Adj325&#39;s Blog
+        校网值班安排 - Adj325的博客 | Adj325&#39;s Blog
         
     </title>
 
@@ -53,7 +53,7 @@
     </div>
     <div class="contents" id="nav-content">
         <ul>
-            <li  class=active >
+            <li >
                 <a href="/">
                     <i class="iconfont icon-shouye1"></i>
                     <span>主页</span>
@@ -88,6 +88,10 @@
         </ul>
     </div>
     
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#校网值班安排"><span class="toc-text">校网值班安排</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#值班要求"><span class="toc-text">值班要求</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据文件"><span class="toc-text">数据文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#算法"><span class="toc-text">算法</span></a></li></ol></li></ol>
+</div>
+    
 </div>
 
 
@@ -111,41 +115,82 @@
     <div class="index-middle">
         <!-- Main Content -->
         
-<div class="post-preview-container" style="min-height: 576px">
-    
-    <div class="post-preview">
-        <div class="post-time">2018-02-03</div>
-        <div class="post-info">
-            <a href="/2018/02/03/爬虫小总结/">
-                <h3>
-                    Python爬虫小总结
-                </h3>
-            </a>
-            <p>
-                
-                <span>/</span>
-                
-                <a class="tag" href="/tags/#Python" title="Python">Python</a>
-                <span>/</span>
-                
-                <a class="tag" href="/tags/#总结" title="总结">总结</a>
-                <span>/</span>
-                
-                
-            </p>
+
+
+<div class="post-container">
+    <div class="post-title">
+        校网值班安排
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2018-09-13 06:27:24</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#Java" title="Java">Java</a>
+        <span>/</span>
+        
+        <a class="tag" href="/tags/#KM" title="KM">KM</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <h1 id="校网值班安排"><a href="#校网值班安排" class="headerlink" title="校网值班安排"></a>校网值班安排</h1><h2 id="值班要求"><a href="#值班要求" class="headerlink" title="值班要求"></a>值班要求</h2><ol>
+<li><p>周一至周五，每天三个阶段</p>
+</li>
+<li><p>每个阶段需要新旧搭配，同部门</p>
+</li>
+<li><p>组织共36人早上均是2人，下午及晚上可能会安排3人</p>
+<p>2人×3阶段×5天 = 30人，存在一天233，其他几天要么223要么232</p>
+</li>
+<li><p>周末值班，每人每学期安排一次即可</p>
+</li>
+</ol>
+<h2 id="数据文件"><a href="#数据文件" class="headerlink" title="数据文件"></a>数据文件</h2><ol>
+<li><p><strong>通讯录.txt</strong></p>
+<p>内容应如下所示</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">姓名,部门id,资历新1旧0</span><br><span class="line">诸葛亮,1,0</span><br><span class="line">牛魔王,1,0</span><br><span class="line">牛魔王,2,0</span><br></pre></td></tr></table></figure>
+<p>校网只有三个部门，id任取三个数字即可</p>
+</li>
+<li><p>课表文件</p>
+<p>从教务系统下载学生的课表文件统一放在xls目录下，程序会读取课表中的姓名，把数据匹配给通讯录中的成员。</p>
+<p>读取情况：</p>
+<ol>
+<li><p>旧课表</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">你大爷 <span class="number">16154399</span>.xls</span><br><span class="line">警告：此为旧课表！</span><br></pre></td></tr></table></figure>
+<p>若有此提示，则该课表为错误旧课表（每节课40分钟，存在三大节），旧课表的出现是因为没有足够的新课表给程序测试。</p>
+<p>应向该成员索取新课表！</p>
+</li>
+<li><p>警告：没有名叫“杜xx”的学生!</p>
+<p>此提示可以忽略，杜xx不在通讯录中，所以才有此警告。</p>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><p>遍历所有安排可能，使用KM算法。</p>
+<p>参考：<a href="https://blog.csdn.net/dark_scope/article/details/8880547" target="_blank" rel="noopener">趣写算法系列之–匈牙利算法</a></p>
+<p>源代码: <a href="https://github.com/Adj325/JobArrange" target="_blank" rel="noopener">JobArrange</a></p>
+
+        
+            <div class="donate-container">
+    <div class="donate-button">
+        <button id="donate-button">赞赏</button>
+    </div>
+    <div class="donate-img-container hide" id="donate-img-container">
+        <img id="donate-img" src="" data-src="/null">
+        <p> 感谢鼓励 </p>
+    </div>
+</div>
+        
+        <div id="comment-container">
         </div>
     </div>
-    
 </div>
-<ul class="pager">
-    
-    <li class="previous">
-        <a href="/">&larr; Newer Posts</a>
-    </li>
-    
-    
-</ul>
-
     </div>
 </div>
 
@@ -211,10 +256,24 @@
     // We expose some of the variables needed by the front end
     window.hexo_search_path = "search.json"
     window.hexo_root = "/"
-    window.isPost = false
+    window.isPost = true
 </script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script src="/js/gitment.js"></script>
+<script>
+    var gitment = new Gitment({
+        id: '校网值班安排',
+        owner: 'Adj325',
+        repo: 'Adj325.github.io',
+        oauth: {
+            client_id: '9a15c2d8d8fbf113b6c1',
+            client_secret: 'f2c81361728f7d5bf9b2ca82ffb0824aa2dc054e',
+        },
+    })
+    gitment.render('comment-container')
+</script>
 
 </html>

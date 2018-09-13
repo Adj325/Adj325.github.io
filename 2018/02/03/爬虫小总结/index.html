@@ -89,7 +89,7 @@
     </div>
     
         <div id="toc" class="toc-article">
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Python爬虫小总结"><span class="toc-text">Python爬虫小总结</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#POST还是GET"><span class="toc-text">POST还是GET?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#正则提取不了想要的内容"><span class="toc-text">正则提取不了想要的内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#乱码了"><span class="toc-text">乱码了</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#被封ip了"><span class="toc-text">被封ip了</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#headers中一定要包含抓包中的所有东西么"><span class="toc-text">headers中一定要包含抓包中的所有东西么?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#selenium与requests更换cookies"><span class="toc-text">selenium与requests更换cookies</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#data-，键值对都正确，获取不到数据"><span class="toc-text">data={}，键值对都正确，获取不到数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其它问题"><span class="toc-text">其它问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#好吧-没了"><span class="toc-text">好吧, 没了</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Python爬虫小总结"><span class="toc-text">Python爬虫小总结</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-POST还是GET"><span class="toc-text">1. POST还是GET?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-正则提取不了想要的内容"><span class="toc-text">2. 正则提取不了想要的内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-乱码"><span class="toc-text">3. 乱码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-被封ip了"><span class="toc-text">4. 被封ip了</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-headers中一定要包含抓包中的所有东西么"><span class="toc-text">5. headers中一定要包含抓包中的所有东西么?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-selenium与requests更换cookies"><span class="toc-text">6. selenium与requests更换cookies</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-data-，键值对都正确，获取不到数据"><span class="toc-text">7. data={}，键值对都正确，获取不到数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-其它问题"><span class="toc-text">8. 其它问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-好吧-没了"><span class="toc-text">9. 好吧, 没了</span></a></li></ol></li></ol>
 </div>
     
 </div>
@@ -140,23 +140,23 @@
 </span>
     </div>
     <div class="post-content ">
-        <h1 id="Python爬虫小总结"><a href="#Python爬虫小总结" class="headerlink" title="Python爬虫小总结"></a>Python爬虫小总结</h1><h2 id="POST还是GET"><a href="#POST还是GET" class="headerlink" title="POST还是GET?"></a>POST还是GET?</h2><p>请求网页，我们主要用到的GET和POST。</p>
+        <h1 id="Python爬虫小总结"><a href="#Python爬虫小总结" class="headerlink" title="Python爬虫小总结"></a>Python爬虫小总结</h1><h2 id="1-POST还是GET"><a href="#1-POST还是GET" class="headerlink" title="1. POST还是GET?"></a>1. POST还是GET?</h2><p>请求网页，我们主要用到的GET和POST。</p>
 <p>一般来说，对某个url，我们使用get或post去请求，都能得到预想中的内容。</p>
 <p>有些情况，服务器会在某个url上，会针对POST和GET的请求的不同，做出不同的反应。</p>
 <p>某些服务器，在某个url的响应下，只做了POST的响应，这时就GET不到了。</p>
 <p>请求不到内容时，不妨这里想想。</p>
-<h2 id="正则提取不了想要的内容"><a href="#正则提取不了想要的内容" class="headerlink" title="正则提取不了想要的内容"></a>正则提取不了想要的内容</h2><p>很多时候我们会用到(.*?)来匹配内容，如果内容间出现了换行符\n(.可以匹配除了换行符（\n）以外的任意一个字符)，那你就无法得到内容！</p>
+<h2 id="2-正则提取不了想要的内容"><a href="#2-正则提取不了想要的内容" class="headerlink" title="2. 正则提取不了想要的内容"></a>2. 正则提取不了想要的内容</h2><p>很多时候我们会用到(.*?)来匹配内容，如果内容间出现了换行符\n(.可以匹配除了换行符（\n）以外的任意一个字符)，那你就无法得到内容！</p>
 <p>针对换行，你看到的换行字符可能是<strong>\r\n</strong>, 也有可能只是<strong>\n</strong>。</p>
 <p>针对空格，有可能是键盘敲出来的空格’ ‘，也有可能是ASCII码中的控制字符。</p>
 <p>往往<strong>所见不是所得</strong>，最好直接复制内容，这样能避免很多问题的出现！</p>
-<h2 id="乱码了"><a href="#乱码了" class="headerlink" title="乱码了"></a>乱码了</h2><p>详见: <a href="https://github.com/Adj325/Python/blob/master/WebSpiders/decode-encode/常见编码问题解决方法.md" target="_blank" rel="noopener">常见编码问题解决方法</a></p>
+<h2 id="3-乱码"><a href="#3-乱码" class="headerlink" title="3. 乱码"></a>3. 乱码</h2><p>详见: <a href="https://github.com/Adj325/Python/blob/master/WebSpiders/decode-encode/常见编码问题解决方法.md" target="_blank" rel="noopener">常见编码问题解决方法</a></p>
 <p>注意: 若出现部分乱码，应该是编码集不够大。</p>
 <p>如对以gbk进行编码的文本，却使用gb2312对其进行解码，就会出现部分乱码。</p>
-<h2 id="被封ip了"><a href="#被封ip了" class="headerlink" title="被封ip了"></a>被封ip了</h2><p>爬取速率过高了，<strong>添加延迟</strong>及<strong>使用代理ip</strong>即可</p>
-<h2 id="headers中一定要包含抓包中的所有东西么"><a href="#headers中一定要包含抓包中的所有东西么" class="headerlink" title="headers中一定要包含抓包中的所有东西么?"></a>headers中一定要包含抓包中的所有东西么?</h2><p>一句话，你永远不可能提前知道服务器需要检测什么。</p>
+<h2 id="4-被封ip了"><a href="#4-被封ip了" class="headerlink" title="4. 被封ip了"></a>4. 被封ip了</h2><p>爬取速率过高了，<strong>添加延迟</strong>及<strong>使用代理ip</strong>即可</p>
+<h2 id="5-headers中一定要包含抓包中的所有东西么"><a href="#5-headers中一定要包含抓包中的所有东西么" class="headerlink" title="5. headers中一定要包含抓包中的所有东西么?"></a>5. headers中一定要包含抓包中的所有东西么?</h2><p>一句话，你永远不可能提前知道服务器需要检测什么。</p>
 <p>哪些url可以精简，哪些键值对不需要，你得自己测试!</p>
-<h2 id="selenium与requests更换cookies"><a href="#selenium与requests更换cookies" class="headerlink" title="selenium与requests更换cookies"></a>selenium与requests更换cookies</h2><p>详见: <a href="https://github.com/Adj325/Python/blob/master/Selenium/Selenium%E4%B8%8Erequests%E7%9B%B8%E4%BA%92%E6%9B%B4%E6%8D%A2cookies.md" target="_blank" rel="noopener">Selenium与requests相互更换cookies</a></p>
-<h2 id="data-，键值对都正确，获取不到数据"><a href="#data-，键值对都正确，获取不到数据" class="headerlink" title="data={}，键值对都正确，获取不到数据"></a>data={}，键值对都正确，获取不到数据</h2><p>使用data={}，默认以utf8的方式把非英文字符以url%形式编码。</p>
+<h2 id="6-selenium与requests更换cookies"><a href="#6-selenium与requests更换cookies" class="headerlink" title="6. selenium与requests更换cookies"></a>6. selenium与requests更换cookies</h2><p>详见: <a href="https://github.com/Adj325/Python/blob/master/Selenium/Selenium%E4%B8%8Erequests%E7%9B%B8%E4%BA%92%E6%9B%B4%E6%8D%A2cookies.md" target="_blank" rel="noopener">Selenium与requests相互更换cookies</a></p>
+<h2 id="7-data-，键值对都正确，获取不到数据"><a href="#7-data-，键值对都正确，获取不到数据" class="headerlink" title="7. data={}，键值对都正确，获取不到数据"></a>7. data={}，键值对都正确，获取不到数据</h2><p>使用data={}，默认以utf8的方式把非英文字符以url%形式编码。</p>
 <p>存在一些服务器，是以gb方式解码用户的请求。</p>
 <p>这种情况下，客户端以utf方式编码请求，服务端以gb方式解码请求，数据不搭配，自然获取不到数据。</p>
 <p>解决方法：</p>
@@ -170,9 +170,9 @@
 </ul>
 <p>此外，对于同一个网站，某些url需要将空格替换为+，有些url则可能需要另作处理。</p>
 <p>总之，灵活变化。</p>
-<h2 id="其它问题"><a href="#其它问题" class="headerlink" title="其它问题"></a>其它问题</h2><p>session中频繁更换ua，有可能会起反作用。</p>
+<h2 id="8-其它问题"><a href="#8-其它问题" class="headerlink" title="8. 其它问题"></a>8. 其它问题</h2><p>session中频繁更换ua，有可能会起反作用。</p>
 <p>每一次拨号，会更换一次ip，可以考虑被反爬时，断开连接再重新拨号。</p>
-<h2 id="好吧-没了"><a href="#好吧-没了" class="headerlink" title="好吧, 没了"></a>好吧, 没了</h2><p>其实，如果你完全根据抓包所得的请求方式来请求，问题就会减少很多。</p>
+<h2 id="9-好吧-没了"><a href="#9-好吧-没了" class="headerlink" title="9. 好吧, 没了"></a>9. 好吧, 没了</h2><p>其实，如果你完全根据抓包所得的请求方式来请求，问题就会减少很多。</p>
 
         
             <div class="donate-container">
