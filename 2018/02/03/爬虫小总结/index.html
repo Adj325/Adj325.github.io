@@ -152,6 +152,11 @@
 <h2 id="3-乱码"><a href="#3-乱码" class="headerlink" title="3. 乱码"></a>3. 乱码</h2><p>详见: <a href="https://github.com/Adj325/Python/blob/master/WebSpiders/decode-encode/常见编码问题解决方法.md" target="_blank" rel="noopener">常见编码问题解决方法</a></p>
 <p>注意: 若出现部分乱码，应该是编码集不够大。</p>
 <p>如对以gbk进行编码的文本，却使用gb2312对其进行解码，就会出现部分乱码。</p>
+<blockquote>
+<p>以utf-8去解码以utf-8编码的response，无法得到中文，得到的都是\x字符。</p>
+<p>此时，headers中要删除<code>&#39;accept-encoding&#39;: &#39;gzip, deflate, br&#39;,</code></p>
+<p>response.content.decode(‘utf-8’)后，即可得到正常编码。</p>
+</blockquote>
 <h2 id="4-被封ip了"><a href="#4-被封ip了" class="headerlink" title="4. 被封ip了"></a>4. 被封ip了</h2><p>爬取速率过高了，<strong>添加延迟</strong>及<strong>使用代理ip</strong>即可</p>
 <h2 id="5-headers中一定要包含抓包中的所有东西么"><a href="#5-headers中一定要包含抓包中的所有东西么" class="headerlink" title="5. headers中一定要包含抓包中的所有东西么?"></a>5. headers中一定要包含抓包中的所有东西么?</h2><p>一句话，你永远不可能提前知道服务器需要检测什么。</p>
 <p>哪些url可以精简，哪些键值对不需要，你得自己测试!</p>
