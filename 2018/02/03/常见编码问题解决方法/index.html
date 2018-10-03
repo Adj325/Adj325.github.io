@@ -142,18 +142,15 @@
     <div class="post-content ">
         <h1 id="常见编码问题解决方法"><a href="#常见编码问题解决方法" class="headerlink" title="常见编码问题解决方法"></a>常见编码问题解决方法</h1><h2 id="字节对象"><a href="#字节对象" class="headerlink" title="字节对象"></a>字节对象</h2><ul>
 <li>常见的解决方法是, 轮询可能编码, 进行解码</li>
-<li>详见: <ul>
+<li>详见：<ul>
 <li><a href="http://blog.csdn.net/bluedamage/article/details/73312665" target="_blank" rel="noopener">编码探讨: 该以什么编码打开”gb2312”文本?</a></li>
 </ul>
 </li>
 </ul>
 <h2 id="编码文本"><a href="#编码文本" class="headerlink" title="编码文本"></a>编码文本</h2><ul>
 <li><p>\u</p>
-<ul>
-<li>s = ‘\u4e2d’</li>
-<li>python3: s.encode(‘utf-8’).decode(‘unicode-escape’)</li>
-<li>python2: s.decode(‘unicode-escape’’)</li>
-<li><p>详见: </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># python3</span></span><br><span class="line"><span class="string">'\u4f60\u597d'</span>.encode(<span class="string">'unicode-escape'</span>).decode(<span class="string">'unicode-escape'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># python2</span></span><br><span class="line"><span class="string">'\u4e2d'</span>.decode(<span class="string">'unicode-escape'</span><span class="string">')</span></span><br></pre></td></tr></table></figure>
+<p>详见: </p>
 <ul>
 <li><p><a href="http://blog.csdn.net/chuatony/article/details/72628868" target="_blank" rel="noopener">Python3 使用 unicode-escape 处理 unicode 16进制字符串编解码问题</a></p>
 </li>
@@ -161,16 +158,11 @@
 </li>
 </ul>
 </li>
-</ul>
-</li>
 <li><p>\x</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># python3: </span></span><br><span class="line"><span class="string">'\xe4\xb8\xad'</span>.encode(<span class="string">'raw_unicode_escape'</span>).decode(<span class="string">'utf-8'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># python2: </span></span><br><span class="line">s = <span class="string">'\xe4\xb8\xad'</span></span><br><span class="line">b = repr(<span class="string">'\xe4\xb8\xad'</span>)</span><br><span class="line">unicode(eval(b),<span class="string">"gbk"</span>)</span><br></pre></td></tr></table></figure>
+<p>详见:</p>
 <ul>
-<li>python3: ‘\xe4\xb8\xad’.encode(‘raw_unicode_escape’).decode(‘utf-8’)</li>
-<li>python2:<br>s = ‘\xe4\xb8\xad’<br>b = repr(‘\xe4\xb8\xad’)<br>unicode(eval(b),”gbk”) </li>
-<li>详见:<ul>
 <li><a href="http://blog.csdn.net/foryouslgme/article/details/54948394" target="_blank" rel="noopener">Python入门：input获取\xe4\xb8\xad字符正确解码</a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -178,6 +170,7 @@
 <li>python2/3<ul>
 <li>urllib.quote(string[, safe])：对字符串进行编码。参数 safe 指定了不需要编码的字符</li>
 <li>urllib.unquote(string) ：对字符串进行解码</li>
+<li>encooding：指定编码, 默认UTF-8</li>
 </ul>
 </li>
 </ul>
