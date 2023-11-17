@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .category-container {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .category-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .category-th {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+            font-weight: bold;
+            font-size: 16px;
+            color: #333;
+            cursor: default; /* 可选：去除鼠标悬停效果 */
+        }
+
+        .bookmark-td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+		
+		td {
+			min-width: 100px;
+		}
+
+		a {
+			text-decoration: none; /* 移除下划线 */
+		}
+
+		/* 绿色 */
+        .a-green  { color: #28a745; } 
+		/* 紫色 */
+        .a-purple { color: #6f42c1; } 
+		/* 蓝色 */
+        .a-blue   { color: #007BFF; } 
+		/* 紫色 */
+        .a-purple { color: #6f42c1; }
+		/* 橙色 */		
+        .a-orange { color: #fd7e14; }
+		/* 红色 */
+        .a-red    { color: #ff0000; }
+    </style>
+</head>
+<body>
+    <div class="category-container">
+
+        <table class="category-table">
+            <tr>
+                <th colspan="5" class="category-th a-orange">什么鬼</th>
+            </tr>
+            <tr>
+                <td class="bookmark-td"><a class="a-orange" href="https://yaohuo.me/" target="_blank">妖火</a></td>
+                <td class="bookmark-td"><a class="a-orange" href="https://ym2.cc/" target="_blank">羊村</a></td>
+                <td class="bookmark-td"><a class="a-orange" href="" target="_blank"></a></td>
+                <td class="bookmark-td"><a class="a-orange" href="" target="_blank"></a></td>
+                <td class="bookmark-td"><a class="a-orange" href="" target="_blank"></a></td>
+            </tr>
+        </table>
+
+        <table class="category-table">
+            <tr>
+                <th colspan="5" class="category-th a-purple">常用工具</th>
+            </tr>
+            <tr>
+                <td class="bookmark-td"><a class="a-purple" href="file:///D:/@Notes/%E6%97%B6%E9%97%B4%E6%88%B3.html" target="_blank">时间戳</a></td>
+                <td class="bookmark-td"><a class="a-purple" href="https://zxjson.com/" target="_blank">Json 格式化</a></td>
+                <td class="bookmark-td"><a class="a-purple" href="https://chat.openai.com" target="_blank">ChatGPT</a></td>
+                <td class="bookmark-td"><a class="a-purple" href="https://poe.com/ChatGPT" target="_blank">ChatGPT Poe</a></td>
+                <td class="bookmark-td"><a class="a-purple" href="https://jwt.io/" target="_blank">JWT</a></td>
+				
+            </tr>
+        </table>
+
+        <table class="category-table">
+            <tr>
+                <th colspan="5" class="category-th a-blue">其它</th>
+            </tr>
+            <tr>
+                <td class="bookmark-td"><a class="a-blue" href="https://p085hmbjwt2.feishu.cn/wiki/UcRIwrf4viehPfkB5lJclGI6nhb" target="_blank">工会 2.0</a></td>
+                <td class="bookmark-td"><a class="a-blue" href="http://test-dyadm.iohubonline.club/#/login?redirect=%2Fdashboard" target="_blank">测试后台</a></td>
+                <td class="bookmark-td"><a class="a-blue" href="https://xxljob.duoju.xyz/xxl-job-admin/jobinfo?jobGroup=10" target="_blank">XXL-Job</a></td>
+                <td class="bookmark-td"><a class="a-blue" href="https://p085hmbjwt2.feishu.cn/wiki/SSrhwH7Fii6q0BkSyeAcYpuAnde?table=tbljEKoba41HHTeM&view=vewMKQjjKz" target="_blank">需求池</a></td>
+                <td class="bookmark-td"><a class="a-blue" href="" target="_blank"></a></td>
+            </tr>
+        </table>
+
+        <table class="category-table">
+            <tr>
+                <th colspan="5" class="category-th a-green">测试服</th>
+            </tr>
+            <tr>
+                <td class="bookmark-td"><a class="a-green" href="https://test-live-livchat.duoju.xyz/swagger-ui.html#/" target="_blank" class="a-blue">Live Swagger</a></td>
+                <td class="bookmark-td"><a class="a-green" href="https://flow.aliyun.com/pipelines/2483964/current" target="_blank" class="a-blue">Live 部署</a></td>
+                <td class="bookmark-td"><a class="a-green" href="https://cs.console.aliyun.com/#/k8s/cluster/ce2628cae1afa41998c0e03984f902741/v2/workload/deployment/detail/live/live-live-dev/pods?type=deployment&clusterType=ManagedKubernetes&profile=Default&state=running&ns=live&region=cn-shenzhen" target="_blank" class="a-blue">Live Pod</a></td>
+                <td class="bookmark-td"><a class="a-green" href="https://sls.console.aliyun.com/lognext/project/k8s-log-ce2628cae1afa41998c0e03984f902741/logsearch/iblink-live" target="_blank" class="a-blue">Live  日志</a></td>
+                <td class="bookmark-td"><a class="a-green" href="" target="_blank"></a></td>
+			</tr>
+            <tr>
+                <td class="bookmark-td"><a class="a-green" href="http://test-admin-livchat.duoju.xyz/swagger-ui.html#/" target="_blank" class="a-blue">Admin Swagger</a></td>
+                <td class="bookmark-td"><a class="a-green" href="https://flow.aliyun.com/pipelines/2485371/current" target="_blank" class="a-blue">Admin 部署</a></td>
+                <td class="bookmark-td"><a class="a-green" href="https://cs.console.aliyun.com/#/k8s/cluster/ce2628cae1afa41998c0e03984f902741/v2/workload/deployment/detail/live/live-admin-dev/pods?type=deployment&clusterType=ManagedKubernetes&profile=Default&state=running&ns=live&region=cn-shenzhen" target="_blank" class="a-blue">Admin Pod</a></td>
+                <td class="bookmark-td"><a class="a-green" href="https://sls.console.aliyun.com/lognext/project/k8s-log-ce2628cae1afa41998c0e03984f902741/logsearch/live-admin" target="_blank" class="a-blue">Admin  日志</a></td>
+				<td class="bookmark-td"><a class="a-green" href="" target="_blank"></a></td>
+			</tr>
+        </table>
+
+        <table class="category-table">
+            <tr>
+                <th colspan="5" class="category-th a-red">生产服</th>
+            </tr>
+            <tr>
+                <td class="bookmark-td"><a class="a-red" href="https://sls.console.aliyun.com/lognext/project/k8s-log-c3511a172cb14422eadc28ca941a8d20a/logsearch/live" target="_blank" class="a-blue">Live 日志</a></td>
+                <td class="bookmark-td"><a class="a-red" href="https://sls.console.aliyun.com/lognext/project/k8s-log-c3511a172cb14422eadc28ca941a8d20a/logsearch/admin" target="_blank" class="a-blue">Admin 日志</a></td>
+                <td class="bookmark-td"><a class="a-red" href="http://47.251.5.236:7001/login" target="_blank">服务部署</a></td>
+                <td class="bookmark-td"><a class="a-red" href="https://dms.aliyun.com/" target="_blank">DMS</a></td>
+                <td class="bookmark-td"><a class="a-red" href="" target="_blank"></a></td>
+            </tr>
+        </table>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时间戳</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .converter-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .converter-container input {
+            margin-right: 10px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 150px;
+        }
+
+        button {
+            /* margin-top: 10px; */
+            padding: 8px;
+            border: none;
+            background-color: #4caf50;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        label {
+            margin-right: 10px;
+        }
+
+        span {
+            margin-left: 10px;
+        }
+    </style>
+    <script src="https://moment.github.io/luxon/global/luxon.min.js"></script>
+</head>
+<body>
+
+
+<div class="converter-container" timezone="全局">
+    <label>时间戳：</label>
+
+    <input type="number" placeholder="输入毫秒级时间戳" value="" />
+
+		<button onclick="click_dateTime2timestamp(event)">&lt;=</button>
+		<span style="min-width: 90px"></span>
+		<button onclick="click_timestamp2DateTime(event)">=></button>
+		<label>&nbsp;日期：</label>
+	
+    <input type="text" placeholder="输入日期" value="" />
+</div>
+
+<div class="converter-container" timezone="UTC+00:00">
+    <label>时间戳：</label>
+
+    <input type="number" placeholder="输入毫秒级时间戳" value="" />
+
+		<button onclick="click_dateTime2timestamp(event)">&lt;=</button>
+		<span style="min-width: 90px"> UTC+00:00 </span>
+		<button onclick="click_timestamp2DateTime(event)">=></button>
+		<label>&nbsp;日期：</label>
+	
+    <input type="text" placeholder="输入日期" value="" />
+</div>
+
+<div class="converter-container" timezone="UTC+05:30">
+    <label>时间戳：</label>
+	
+    <input type="number" placeholder="输入毫秒级时间戳" value="" />
+
+		<button onclick="click_dateTime2timestamp(event)">&lt;=</button>
+		<span style="min-width: 90px"> UTC+05:30 </span>
+		<button onclick="click_timestamp2DateTime(event)">=></button>
+		<label>&nbsp;日期：</label>
+	
+    <input type="text" placeholder="输入日期" value="" />
+</div>
+<div class="converter-container" timezone="UTC+08:00">
+    <label>时间戳：</label>
+	
+    <input type="number" placeholder="输入毫秒级时间戳" value="" />
+
+		<button onclick="click_dateTime2timestamp(event)">&lt;=</button>
+		<span style="min-width: 90px"> UTC+08:00 </span>
+		<button onclick="click_timestamp2DateTime(event)">=></button>
+		<label>&nbsp;日期：</label>
+	
+    <input type="text" placeholder="输入日期" value="" />
+</div>
+
+<script>
+	function initByTimestamp(timestamp) {
+		let elements = document.getElementsByClassName('converter-container');
+		Array.from(elements).forEach((element, index) => {
+			let timezone = element.attributes.timezone.value;
+			if (timezone == '全局') {
+				return;
+			}
+			let inputs = element.getElementsByTagName('input');
+			inputs[0].value = timestamp;
+			inputs[1].value = timestamp2DateTime(timestamp, timezone);
+			
+		});
+	}
+
+	function initByDateTime(dateTime) {
+		let elements = document.getElementsByClassName('converter-container');
+		Array.from(elements).forEach((element, index) => {
+			let timezone = element.attributes.timezone.value;
+			if (timezone == '全局') {
+				return;
+			}
+			let inputs = element.getElementsByTagName('input');
+			inputs[1].value = dateTime;
+			inputs[0].value = dateTime2timestamp(dateTime, timezone);
+			
+		});
+	}
+
+	initByTimestamp(Date.now());
+
+	function timestamp2DateTime(timestamp, timezone) {
+		if (typeof timestamp === "string") {
+			timestamp = parseInt(timestamp);
+		} 
+		const dateTime = luxon.DateTime.fromMillis(timestamp).setZone(timezone);
+		return dateTime.toFormat('yyyy-MM-dd HH:mm:ss');
+	}
+
+	function dateTime2timestamp(dateTime, timezone) {
+	    const parsedDateTime = luxon.DateTime.fromFormat(dateTime, 'yyyy-MM-dd HH:mm:ss', { zone: 'utc' });
+		const dateTimeInTimeZone = parsedDateTime.setZone(timezone);
+		const timestamp = dateTimeInTimeZone.toMillis();
+		return timestamp;
+	}
+	
+	function click_timestamp2DateTime(event) {
+		let currentElement = event.target;
+		let timezone = currentElement.parentElement.attributes.timezone.value;
+		let inputs = currentElement.parentElement.getElementsByTagName('input');
+		let timestamp = inputs[0].value;
+		if (timezone == '全局') {
+			initByTimestamp(timestamp);
+			return;
+		} else {
+			let dateTime  = inputs[1].value;
+			inputs[1].value = timestamp2DateTime(timestamp, timezone);
+		}
+	}
+	
+	function click_dateTime2timestamp(event) {
+		let currentElement = event.target;
+		let timezone = currentElement.parentElement.attributes.timezone.value;
+		let inputs = currentElement.parentElement.getElementsByTagName('input');
+		let dateTime  = inputs[1].value;
+		if (timezone == '全局') {
+			initByDateTime(dateTime);
+			return;
+		} else {
+			let timestamp = inputs[0].value;
+			console.log(timezone, timestamp, dateTime);
+			inputs[0].value = dateTime2timestamp(dateTime, timezone);
+		}
+	}
+	
+</script>
+
+</body>
+</html>
