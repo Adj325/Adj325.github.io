@@ -150,7 +150,7 @@
 	}
 
 	function dateTime2timestamp(dateTime, timezone) {
-	    const parsedDateTime = luxon.DateTime.fromFormat(dateTime, 'yyyy-MM-dd HH:mm:ss', { zone: 'utc' });
+	    const parsedDateTime = luxon.DateTime.fromFormat(dateTime, 'yyyy-MM-dd HH:mm:ss', { zone: timezone });
 		const dateTimeInTimeZone = parsedDateTime.setZone(timezone);
 		const timestamp = dateTimeInTimeZone.toMillis();
 		return timestamp;
