@@ -137,6 +137,19 @@
     <input type="text" placeholder="输入日期" value="" />
 </div>
 
+<div class="converter-container" timezone="UTC+06:00">
+    <label>时间戳：</label>
+	
+    <input type="number" placeholder="输入毫秒级时间戳" value="" />
+
+		<button onclick="click_dateTime2timestamp(event)">&lt;=</button>
+		<span style="min-width: 90px"> UTC+06:00 </span>
+		<button onclick="click_timestamp2DateTime(event)">=></button>
+		<label>&nbsp;日期：</label>
+	
+    <input type="text" placeholder="输入日期" value="" />
+</div>
+
 <div class="converter-container" timezone="UTC+07:00">
     <label>时间戳：</label>
 	
@@ -242,3 +255,4 @@
 
 </body>
 </html>
+
